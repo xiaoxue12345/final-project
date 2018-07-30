@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Loan Count Trend</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel='stylesheet' type='text/css' href='../common/nv.d3.css' />
+    <script type='text/javascript' src='../common/d3.js'></script>
+    <script type='text/javascript' src='../common/nv.d3.js'></script>
+    <script type='text/javascript' src='./data.js'></script>
+    <script type='text/javascript' src='./index.js'></script>
+  </head>
+  <body style='text-align:center;'>
+    <h1>Loan Count Trend</h1>
+    <hr />
+    <svg id='graph' style='height:512px;' />
+    <hr />
+    <button id='toggleRepayment'>Toggle Repayment Interval Data</button>
+    <button id='toggleSectors'>Toggle Sectors Data</button>
+    <button id='toggleActivites'>Toggle Activites Data</button>
+    <hr />
+    <p>This graph shows Loan counts from 2014 to 2017. The Y-axis shows the loan counts
+    while the X-axis shows the year.</p>
+    <p>The loans count trend seems to be only slightly increasing from 2014-2016,
+    the drop on 2017 is due to im compelte data - we only have 7 months data for year 2017.</p>
+    <p>The sectors and actitives stay quit stable and slightly grows.</p>
+  </body>
+</html>
