@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Know More about Kiva Crowdfunding!</title>
+
+		<meta name="description" content="CS498 Data Visualization Final Project">
+		<meta name="author" content="Xiaoxue Zhang">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/bubble_chart.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Load D3 -->
+		<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+        <style>
+
+            .axis {
+                stroke-width: 1px;
+                stroke: white;
+                fill:white
+                font-size: 12px;
+            }
+            .category-name {
+                font-size: 20px;
+                margin: 0 !important;
+            }
+            .key-dot {
+                display: inline-block;
+                height: 12px;
+                margin-right: .5em;
+                width: 12px;
+
+            }
+
+
+            .Dessert { background: #FF6138}
+            .Drink { background: #FFFF9D}
+            .Food { background: #BEEB9F }
+            .Sides{ background: #00A388}
+
+            #categoryLegend{
+                overflow:hidden;
+                font-size: 15px;
+
+            }
+            #backh2{
+                color: antiquewhite;
+            }
+
+            #smallBack{
+                color: navajowhite;
+                font-style: italic;
+            }
+
+
+            .categoryLegend {
+                float:left;
+                margin-right: 1em;
+
+            }
+
+            .area {
+                fill: orange;
+                fill-opacity: 0.6;
+                clip-path: url(#clip);
+            }
+
+            .zoom {
+                cursor: move;
+                fill: none;
+                pointer-events: all;
+            }
+
+
+        </style>
+
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal"> <!--	Reveal --->
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides"> <!-- Slide -->
+                <section>
+                    <h3>CS498 Data Visualization Final Project</h3>
+                    <figure>
+                            <img src="images/Best-loan-advisor-in-Rajkot3_adtubeindia.jpg" style="max-width:80%;max-height:100%;" >
+                            <br>
+                            
+                    </figure>
+                </section>
+				<section>
+					<h1>Know More about Kiva Crowdfunding!</h1>
+					<p>
+						<small>auther: Xiaoxue Zhang </small>
+					</p>
+				</section>
+                 <section>
+                        <h2>The Goal of Final project</h2>
+                        <small>
+                            <p>
+                                We have a good understanding of data visualization so far. In this project, we choose the <strong> interactive slieshow</strong>approach , which is more
+                                effective to presente the kiva data and the analysis results,  built with <strong> scenes, annotations, parameters, and triggers</strong>.
+                            </p>
+                
+                        </small>
+                </section>
+
+                <section>
+                    <figure>
+                            <img src="images/kiva.jpg" style="max-width:80%;max-height:100%;" >
+                            <br>      
+                    </figure>
+
+                    <small><a href="https://www.kiva.org/about/">Kiva by the numbers</a>-Kiva infomration taken from website.</small>
+
+                </section>
+
+                </section>
+                    <section>
+                        <h2>Where is Kiva Crowdfunding from?</h2>
+                        <small>
+                            <p>
+                                <strong>Kiva.org<a href="https://www.kiva.org/"></a></strong> is an online crowdfunding platform to extend financial services to poor and financially excluded people around the world. Kiva lenders have provided over $1 billion dollars in loans to over 2 million people. In order to set investment priorities, help inform lenders, and understand their target communities, knowing the level of poverty of each borrower is critical. However, this requires inference based on a limited set of information for each borrower.
+                            </p>
+                            <div class="fragment" data-fragment-index="0" class="navigate-down" style="cursor: pointer;"><img src="images/arrow-down.png" style="border: none; background:none; box-shadow:none;" alt="Arrow Down"></div>
+                        </small>
+                    </section>
+
+                    <section>
+                        <h3>What can we do with Kiva data?</h3>
+                        <small>
+                            <ol>
+                                <li class="fragment" data-fragment-index="1"><strong>Payment Type Analysis</strong></li>
+                                <p class="fragment" data-fragment-index="2"> This will help us to understand how is users' perference.</p>
+                                <li class="fragment" data-fragment-index="3"><strong>Countries distribution Analysis</strong></li>
+                                <p class="fragment" data-fragment-index="4">For kiva loan, which country contributes most. we can  figure out the cause and grow the other potential countries in future.</p>
+                                <li class="fragment" data-fragment-index="5"><strong>Activities Analysis</strong></li>
+                                <p class="fragment" data-fragment-index="6">Acitivities definitely help us to know the purpose of loans.</p>
+                                <li class="fragment" data-fragment-index="7"><strong>Sectors Analysis</strong></li>
+                                <p class="fragment" data-fragment-index="8"> We need analysis the main sectors for loans. is it from agributure or food?</p>
+                            </ol>
+                            <div class="fragment" data-fragment-index="9" style="cursor: pointer;"><img src="images/arrow-right.png" style="border: none; background:none; box-shadow:none;" height="60" width="60"></div>
+
+                            </ol>
+                        </small>
+
+                    </section>
+                </section>
+
+				<section>
+                    <section>
+                        <h2>What is source data?</h2>
+
+                        <p>It contains 67120 loans records with 20 attributes, such as loans_ amount, activity, country and term_in_months etc.
+                        <em><small>We used R and python to pre-cleansing our raw data - deal with missing value and outliter data point ect. </small>
+                        </em>
+                        <div class="fragment" data-fragment-index="10" style="cursor: pointer;"><img src="images/arrow-down.png" style="border: none; background:none; box-shadow:none;" alt="Arrow Down"></div>
+
+                    </section>
+                 </section>
+
+                 <section>
+
+					<section>
+						<h3>Distribution of Repayment Types</h3>
+						<div id="chartTop20" style="max-height:40%;"></div>
+					</section>
+
+                    <section>
+                        <h3>Distribution of Countries</h3>
+                        <div id="chartTop202" style="max-height:40%;"></div>
+
+                        </small>
+                    </section>
+
+                    <section>
+                        <h3>Distribution of Activities</h3>
+                        <div id="chartTop203" style="max-height:40%;"></div>
+                    </section>
+
+                    <section>
+                        <h3>Distribution of Sectors</h3>
+                        <div id="chartTop204" style="max-height:40%;"></div>
+                    </section>
+
+
+                </section>
+
+                <section>
+                         <h3>Summary</h3>
+                          <small>
+                            <ol>
+                                <li class="fragment" data-fragment-index="1"><strong>Payment Type Analysis</strong></li>
+                                <p class="fragment" data-fragment-index="2"> Types of interval payments monthly, irregular, bullet and weekly. Out of which monthly is more frequent and weekly is less frequent.</p>
+                                <li class="fragment" data-fragment-index="3"><strong>Countries distribution Analysis</strong></li>
+                                <p class="fragment" data-fragment-index="4">Philippines is most frequent countries who got more loans followed by Kenya.</p>
+                                <li class="fragment" data-fragment-index="5"><strong>Activities Analysis</strong></li>
+                                <p class="fragment" data-fragment-index="6">Top 2 loan activity which got more number of funded are Farming and general Store.</p>
+                                <li class="fragment" data-fragment-index="7"><strong>Sectors Analysis</strong></li>
+                                <p class="fragment" data-fragment-index="8"> The most popular activities are agriculture and foog in terms of loans count followed by Retail.</p>
+                            </ol>
+                            <div class="fragment" data-fragment-index="9" style="cursor: pointer;"><img src="images/arrow-right.png" style="border: none; background:none; box-shadow:none;" height="60" width="60"></div>
+
+                            </ol>
+                        </small>
+                </section>
+
+
+                <section>
+                    <section>
+                        <section>
+                          <li><a href='./project-1/index.html'>Loan counts trend study</a></li>
+                          <small> Plese click the link above and see more details</small>
+                          <figure>
+                            <img src="images/analysis.jpg" style="max-width:80%;max-height:100%;" >
+                            <br>                    
+                          </figure>
+
+                        </section>
+                    </section>
+                </section>
+                <section>
+                    <h3>What can we do with data for future?</h3>
+                    <small>Here we only use a few types of charts to presentate the relationship inside the data's attributes. in the future we can try to use the more complicated charts. </small>
+                </section>
+
+			</div> <!-- Slide -->
+
+		</div> <!--	Reveal --->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+		<script src="scripts/top20.js"></script>
+        <script src="scripts/top202.js"></script>
+        <script src="scripts/top203.js"></script>
+        <script src="scripts/top204.js"></script>
+        <script src="scripts/treemap.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+
+		<script src="scripts/areaChart.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/bubble_chart.js"></script>
+
+
+
+	</body>
+</html>
